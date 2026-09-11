@@ -89,10 +89,6 @@ See `lambda_function.py` - 20 lines event-driven code.
 
 > "I built a serverless event-driven pipeline where uploading a CSV to S3 automatically triggers a Python Lambda which parses it and stores records in DynamoDB. I implemented least-privilege IAM, handled case-sensitive DynamoDB errors, and verified via CloudWatch logs. It's fully serverless, zero-cost when idle, and scales automatically."
 
-## 🧹 Cleanup (To avoid billing)
-```
-Delete S3 objects -> Delete buckets -> Delete DynamoDB table -> Delete Lambda -> Delete IAM Role -> Delete CloudWatch Log Group
-```
 
 
 ---
