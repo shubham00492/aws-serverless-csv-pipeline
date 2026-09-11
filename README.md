@@ -20,7 +20,7 @@ We used **1 bucket for MVP**. In production, 2-bucket pattern is used:
 - **Bucket 2 (processed):** `csv-processed-bucket` - Lambda moves file here after success to avoid re-trigger loop & for audit.
 Our code currently only reads from Bucket 1 and writes to DynamoDB, so Bucket 2 is optional/archive.
 
-## 📦 Resources Used & Actual Use
+## 📦 Resources Used 
 
 | Resource | Name We Used | Purpose |
 |----------|--------------|---------|
@@ -29,7 +29,6 @@ Our code currently only reads from Bucket 1 and writes to DynamoDB, so Bucket 2 
 | **DynamoDB** | `Processedrecords` (Partition Key: `id` String) | Store each CSV row as item - case-sensitive! |
 | **IAM Role** | `csv-processor-pune-role-ejfo7v83` | Give Lambda least-privilege access |
 | **CloudWatch** | `/aws/lambda/csv-processor-pune` | Debugging - shows `AccessDenied`, `ResourceNotFoundException`, `Done` |
-| **SNS (Optional)** | `csv-processed-alerts` | Email/SMS alert after processing |
 
 ## 🛠️ Step-by-Step - How I Built It
 
