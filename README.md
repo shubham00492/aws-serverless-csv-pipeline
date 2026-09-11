@@ -1,8 +1,7 @@
 # AWS Serverless CSV Processing Pipeline - S3 → Lambda → DynamoDB
 
 > Event-driven, zero-server project built in Pune - Upload CSV to S3, auto-process via Lambda, store in DynamoDB.
-
-![AWS Architecture](architecture.png)
+![AWS Architecture](aws_serverless_csv_pipeline.jpg)
 
 ## 🚀 Live Demo Proof (What I Did)
 - Uploaded `test.csv` to S3 Input Bucket
